@@ -10,24 +10,54 @@ app.use(cors());
 db.serialize(() => {
   //effectu une action et attend la fin de cette action avant la suite du code
   db.run(
-    "CREATE TABLE IF NOT EXISTS anime (id INTEGER PRIMARY KEY AUTOINCREMENT, nom VARCHAR(50), synopsis VARCHAR(500), auteur VARCHAR(50), genre VARCHAR(50), type VARCHAR(50), date_ajout VARCHAR(50), date_sorti VARCHAR(50), duree VARCHAR(50), status VARCHAR(50))"
+    "CREATE TABLE IF NOT EXISTS categories (category_id INTEGER PRIMARY KEY AUTOINCREMENT, category_name VARCHAR(50) UNIQUE)"
   );
+
   db.run(
-    "INSERT INTO anime (nom, synopsis, auteur, genre, type, date_ajout, date_sorti, duree, status) VALUES (?,?,?,?,?,?,?,?,?)",
-    "Hugo",
-    "Hugo",
-    "Hugo",
-    "Hugo",
-    "Hugo",
-    "Hugo",
-    "Hugo",
-    "Hugo",
-    "Hugo"
+    "CREATE TABLE IF NOT EXISTS games (game_id INTEGER PRIMARY KEY AUTOINCREMENT, game_name VARCHAR(50) UNIQUE, game_img VARCHAR(200), game_resume VARCHAR(50), game_commentary VARCHAR(300), game_note INTEGER , category_name ,FOREIGN KEY (category_name) REFERENCES categories(category_name))"
   );
+
+  db.run(
+    "INSERT INTO games (game_name, game_img, game_resume, game_commentary, game_note, category_name) VALUES (?,?,?,?,?,?)",
+    "GTA",
+    "none.jpg",
+    "pas encore",
+    "c marrant",
+    "13",
+    "action"
+  );
+
+  db.run(
+    "INSERT INTO games (game_name, game_img, game_resume, game_commentary, game_note, category_name) VALUES (?,?,?,?,?,?)",
+    "BLACK OPS",
+    "none.jpg",
+    "pas encore",
+    "c tro nul",
+    "2",
+    "fps"
+  );
+
+  db.run(
+    "INSERT INTO games (game_name, game_img, game_resume, game_commentary, game_note, category_name) VALUES (?,?,?,?,?,?)",
+    "LEAGUE OF LEGENDS",
+    "none.jpg",
+    "pas encore",
+    "c bof",
+    "5",
+    "moba"
+  );
+
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "action");
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "adventure");
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "rpg");
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "arcade");
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "moba");
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "mmo_rpg");
+  db.run("INSERT INTO categories (category_name) VALUES (?)", "fps");
 });
 
 app.get("/", function(request, response) {
-  db.all("SELECT * FROM anime", function(error, data) {
+  db.all("SELECT * FROM games", function(error, data) {
     response.send(data);
     if (!error) console.log(data);
     else console.log(error);
