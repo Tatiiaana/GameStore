@@ -102,7 +102,7 @@ var gamesOfTheMoment = [
 
     container.appendChild(games);
     games.appendChild(fiche);
-    fiche.appendChild(titlesGames);
+    fiche.appendChild(titlesGames); 
     fiche.appendChild(imagesGames);
     fiche.appendChild(synopsisGames);
   
