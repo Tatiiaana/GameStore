@@ -2,18 +2,17 @@ body {
     margin: 0;
     padding: 0;
     min-height: 1000px;
+    }
     
-}
-
-#container {
+    #container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-content: center;
     width: 100%;
-}
-
-ul {
+    }
+    
+    ul {
     margin: 0;
     padding: 0;
     background: #000000;
@@ -23,139 +22,171 @@ ul {
     align-content: center;
     width: 100%;
     height: 70px;
+    }
     
-}
-
-#logo {
+    #logo {
     margin: 15px;
     width: 40px;
     height: 40px;
-}
-
-#basket {
+    }
+    
+    #basket {
     width: 25px;
     height: 25px;
     left: 95%;
     position: absolute;
-}
-
-
-.list {
-    font-family: 'Arial', sans-serif;
+    }
+    
+    .list {
+    font-family: "Arial", sans-serif;
     align-items: center;
-    font-size: 15px;
+    font-size: 14px;
     color: #f6f4f4;
     display: flex;
     margin: 10px;
     list-style: none;
-}
-
-.list:hover {
+    }
+    
+    .list:hover {
     color: #b8e994;
     position: relative;
+    }
     
-}
-
-#scroll_menu:hover {
+    #scroll_menu:hover {
     color: #b8e994;
+    }
     
-}
-
-.list a {
+    .list a {
     color: white;
     padding: 5px 10px;
     text-transform: uppercase;
     text-decoration: none;
-}
-
-
-header {
-    background: url('images/bg.png');
+    }
+    
+    header {
+    background: url("images/bg.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 88vh;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
     align-content: center;
     align-items: center;
-}
-
-#title {
+    }
+    
+    #title {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 90px;
-}
-
-.paragraphe {
+    margin-bottom: 0px;
+    
+    }
+    
+    .paragraphe {
     padding: 10px;
     color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
     font-weight: 200;
-   
-}
-
-
-.games_of_the_moment {
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: 20px;
+    }
+    
+    .games_of_the_moment {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+    text-align: center;
     margin: 20px;
-}
-
-#gotm {
-
+    }
+    
+    #gotm {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
     background-color: #000000;
-    height: 900px;
-    width: 100% auto;
+    }
     
-
-}
-
-
-.titlesGOTM {
-    margin: 50px;
+    #div_gotm {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    }
+    
+    #title_gotm {
+    font-size: 50px;
+    }
+    
+    .fiche {
+    }
+    
+    h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: white;
+    }
+    
+    h6 {
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+    color: white;
+    }
+    
+    .synopsis {
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    height: 150px;
     width: 100%;
-}
-
-
-.fiche { 
+    overflow-y: scroll;
+    overflow-x: hidden;
     
-}
-
-
-h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    color: white;
-}
-
-h6 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    color: white;
-}
-
-.synopsis {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    height: 100px;
-    width: 280px;
-
-}
-
-img {
+    }
+    
+    img {
     margin: 20px;
-    width: 200px;
-    height: 200px;
-}
-
-p {
-    font-family: 'Arial', sans-serif;
+    width: 37vh;
+    height: 55vh;
+    position: relative;
+    }
+    
+    p {
+    text-align: center;
+    margin: 0;
+    font-family: "Arial", sans-serif;
     color: white;
-}
+    }
+
+    .div_images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 37vh;
+        height: 55vh;
+        position: absolute;
+        margin: 20px;
+        z-index: 20000;
+        visibility: none;
+        /* margin-left: 52.5px; */
+    }
+
+    .div_images > p {
+        width: 100%;
+        font-size: 18px;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        
+    }
+
+    .div_images:hover :first-child {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: block;
+        
+    }
