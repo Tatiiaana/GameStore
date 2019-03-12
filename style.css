@@ -52,7 +52,6 @@ ul {
 
 .list:hover {
     color: #b8e994;
-    display: inline-block;
     position: relative;
     
 }
@@ -63,9 +62,10 @@ ul {
 }
 
 .list a {
-    display: block;
+    color: white;
     padding: 5px 10px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 
@@ -99,6 +99,11 @@ header {
 
 
 .games_of_the_moment {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     margin: 20px;
 }
 
@@ -106,7 +111,7 @@ header {
 
     display: flex;
     background-color: #000000;
-    height: 700px;
+    height: 900px;
     width: 100% auto;
     
 
@@ -120,41 +125,33 @@ header {
 
 
 .fiche { 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: flex-start;
     
 }
 
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 
 h6 {
     font-family: 'Arial', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: white;
 }
 
 .synopsis {
     font-family: 'Arial', sans-serif;
     font-size: 13px;
-    font-style: oblique;
-    flex-basis: 100%;
-    quotes: inherit;
-    height: 100%;
-    width: 200px;
+    height: 100px;
+    width: 280px;
 
 }
 
 img {
     margin: 20px;
-    width: 300px;
+    width: 250px;
     height: 400px;
 }
 
