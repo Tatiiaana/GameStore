@@ -79,6 +79,9 @@ list.setAttribute("id", "scroll_menu");
 }
 }
 
+
+
+
 console.log(namelist);
 
 basket.addEventListener("click", function() {

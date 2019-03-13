@@ -63,6 +63,8 @@ container.appendChild(ul);
 ul.appendChild(logo);
 ul.appendChild(basket);
 
+
+
 for (let i = 0; i < 5; i++) {
 var list = document.createElement("li");
 var a = document.createElement("a");
@@ -86,8 +88,21 @@ btnBasket();
 container.appendChild(header);
 
 ul.appendChild(list);
+var divSearch = document.createElement('div');
+divSearch.setAttribute('id', 'div_search');
+var inputSearch = document.createElement("input");
+inputSearch.setAttribute("id", "input_search");
+var buttonSearch = document.getElementById('btnSearch');
+
+
+ul.appendChild(divSearch);
+divSearch.appendChild(inputSearch);
+divSearch.appendChild(buttonSearch);
+
+
 header.appendChild(title);
 header.appendChild(paragraphe);
+
 
 var basket = document.createElement("img");
     basket.setAttribute("id", "basket");

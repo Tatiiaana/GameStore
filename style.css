@@ -25,6 +25,32 @@ body {
             align-items: center;
         }
     
+#div_search {
+    position: absolute;
+    display: flex;
+    left: 70%;
+}
+
+
+
+#btnSearch {
+    margin-top: 27px;
+    width: 50px;
+    height: 20px;
+	cursor:pointer;
+    text-transform:capitalize;
+    
+}
+
+#input_search {
+    margin: 25px;
+    height: 20px;
+    width: 150px;
+    background-color: black;
+    border-color: white ;
+}
+
+
     ul {
     z-index: 50;
     position: sticky;
