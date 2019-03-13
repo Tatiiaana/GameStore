@@ -130,7 +130,7 @@ text-align: center;
 
 #container_games {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     height: 700px;
@@ -138,6 +138,7 @@ text-align: center;
 }
 
 .games {
+  padding: 15px;
     width: 375px;
     height: 500px;
     display: flex;
@@ -145,7 +146,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #000000;
   }
 
 .note {
@@ -156,7 +157,7 @@ text-align: center;
     }
     
 .div_synopsis {
-    width: 80%;
+    width: 70%;
     height: 13%;
     overflow: scroll;
 
@@ -171,12 +172,20 @@ text-align: center;
         font-size: 14px;
         
         }
-    
+        
+        .price {
+          color: white;
+          font-size: 15px;
+          font-family: "Arial", sans-serif;
+          
+        }
         
         #buy {
-            width: 50px;
-            height: 50px;
+          font-family: "Arial", sans-serif;
+            width: 30px;
+            height: 30px;
             background-color: white;
+            color: black;
         }
 
         .div_elements {

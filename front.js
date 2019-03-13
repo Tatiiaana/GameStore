@@ -144,6 +144,7 @@ var notesGames = document.createElement("p");
     notesGames.setAttribute("class", "note");
     notesGames.textContent = game.game_note;
 
+
 container.appendChild(games);
 games.appendChild(fiche);
 fiche.appendChild(titlesGames);

@@ -141,9 +141,10 @@ games.appendChild(images);
 games.appendChild(divSynopsis);
 divSynopsis.appendChild(synopsis);
 games.appendChild(divElements)
-divElements.appendChild(btn);
+
 divElements.appendChild(price);
-divElements.appendChild(note);
+      divElements.appendChild(note);
+      divElements.appendChild(btn);
         
 
   btn.appendChild(textBtn);
