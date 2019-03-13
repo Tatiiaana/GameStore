@@ -38,6 +38,8 @@ var db = res;
 make_item(db);
 });
 */
+
+
 var container = document.getElementById("container");
 var header = document.createElement("header");
 
@@ -102,67 +104,49 @@ var containerGames = document.createElement("div");
     containerGames.setAttribute('id', 'container_games');
 var games = document.createElement("div");
     games.setAttribute("class", "games");
-var images = document.createElement("img");
-    images.setAttribute("src", game.game_img);
 var titles = document.createElement("h1");
     titles.setAttribute("class", "titles");
     titles.textContent = game.game_name;
+var images = document.createElement("img");
+    images.setAttribute("src", game.game_img)
+var divSynopsis = document.createElement("div");
+    divSynopsis.setAttribute("class", "div_synopsis");
 var synopsis = document.createElement("p");
     synopsis.setAttribute("class", "synopsis");
     synopsis.textContent = game.game_resume;
-var notes = document.createElement("p");
-    notes.setAttribute("class", "note");
-    notes.textContent = game.game_note;
-
+var divElements = document.createElement("div");
+    divElements.setAttribute("class", "div_elements");
+var price = document.createElement('p');
+    price.setAttribute("class", "price");
+    price.textContent = game.game_price;
+var note = document.createElement('p');
+    note.setAttribute("class", "note");
+    note.textContent = game.game_note;
         
-        container.appendChild(header);
+
+    var btn = document.createElement('button');
+    var textBtn = document.createTextNode('BUY');
+    btn.setAttribute('id', 'buy');
+        
+        
+        
+container.appendChild(header);
 header.appendChild(containerGames);
 containerGames.appendChild(games);
-games.appendChild(images);
 games.appendChild(titles);
-games.appendChild(synopsis);
-games.appendChild(notes);
-    
-});
-}
-
-function make_items(db) {
-    db.forEach(function(game) {
-    var games = document.createElement("div");
-        games.setAttribute("class", "games");
-        var divImages = document.createElement('div');
-        divImages.setAttribute("class", "images");
-    var images = document.createElement("img");
-        images.setAttribute("src", game.game_img);
-    var titles = document.createElement("h1");
-        titles.setAttribute("class", "titles");
-        titles.textContent = game.game_name;
-    var synopsis = document.createElement("p");
-        synopsis.setAttribute("class", "synopsis");
-        synopsis.textContent = game.game_resume;
-    var notes = document.createElement("p");
-        notes.setAttribute("class", "note");
-        notes.textContent = game.game_note;
-    
-       
-
-    header.appendChild(games);
-    games.appendChild(images);
-    games.appendChild(titles);
-    games.appendChild(synopsis);
-    games.appendChild(notes);
+games.appendChild(images);
+games.appendChild(divSynopsis);
+divSynopsis.appendChild(synopsis);
+games.appendChild(divElements)
+divElements.appendChild(btn);
+divElements.appendChild(price);
+divElements.appendChild(note);
         
-    });
-}
+
+  btn.appendChild(textBtn);
     
-var basketProduct = document.getElementById('basket');
-
-var basket = document.createElement('i');
-basket.setAttribute('class', 'fas fa-shopping-bag');
-
-container.appendChild(basketProduct);
-basketProduct.appendChild(basket);
-
-basket.addEventListener('click', function() {
-  btnBasket();
 });
+}
+
+
+
